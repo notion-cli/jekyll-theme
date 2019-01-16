@@ -1,0 +1,18 @@
+@mixin font-smoothing($value: true) {
+    @if ($value == true) {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+    } @else {
+      -moz-osx-font-smoothing: auto;
+      -webkit-font-smoothing: subpixel-antialiased;
+    }
+}
+
+// Import partials.
+@import
+  "notion/constants",
+  "notion/alerts",
+  "notion/base",
+  "notion/layout",
+  "notion/syntax-highlighting"
+;

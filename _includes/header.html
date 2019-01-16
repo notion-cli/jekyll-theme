@@ -1,0 +1,22 @@
+<header class="site-header" role="banner">
+    {% if site.data.nav.track == "home" %}
+      {% assign homeClass = "router-link-active" %}
+    {% elsif site.data.nav.track == "docs" and page.collection == "guide" %}
+      {% assign guideClass = "router-link-active" %}
+    {% elsif site.data.nav.track == "docs" and page.collection == "reference" %}
+      {% assign referenceClass = "router-link-active" %}
+    {% elsif site.data.nav.track == "blog" %}
+      {% assign blogClass = "router-link-active" %}
+    {% endif %}
+    <nav>
+      <div class="home-link"><a href="https://www.notionjs.com"><span class="site-name">Notion</a></div>
+      <ul>
+        <li><a class="{{ homeClass }}" href="https://www.notionjs.com/">Home</a></li>
+        <li><a class="{{ guideClass }}" href="https://docs.notionjs.com/guide/">Guide</a>
+        <li><a class="{{ referenceClass }}" href="https://docs.notionjs.com/reference/">Reference</a>
+        <li><a class="{{ blogClass }}" href="https://blog.notionjs.com">Blog</a>
+        <li><a href="https://github.com/notion-cli/notion">GitHub</a>
+      </ul>
+    </nav>
+</header>
+  

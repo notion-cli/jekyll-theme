@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<main class="page-container home" aria-label="Content">
+<div class="page-contents">
+    <div class="hero">
+        <h1>Notion</h1>
+        <p class="description">{{ page.tagline }}</p>
+        <p class="action"><a class="nav-link action-button" href="{{ page.getting-started }}">Get Started &rarr;</a></p>
+    </div>
+
+    <div class="features">
+        {% for feature in page.features %}
+        <div class="feature">
+            <h2>{{ feature.title }}</h2>
+            <p>{{ feature.description }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="content custom">
+        {{ content }}
+    </div>
+
+    {% include footer.html %}
+</div>
+</main>
