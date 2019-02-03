@@ -2,6 +2,10 @@
 $navbar-vertical-padding: 0.7rem;
 $navbar-horizontal-padding: 1.5rem;
 
+.icon.outbound {
+  color: #aaa;
+}
+
 header {
   position: fixed;
   z-index: 20;
@@ -52,9 +56,43 @@ header {
   }
 }
 
+@media (max-width: $media-mobile) {
+  header {
+    nav {
+      padding-left: 4rem;
+    }
+    ul#desktop-site-nav {
+      display: none;
+    }
+  }
+}
+
+header {
+  nav {
+    .sidebar-button {
+      box-sizing: content-box;
+      display: block;
+      width: 1.25rem;
+      height: 1.25rem;
+      position: absolute;
+      padding: 0.6rem;
+      top: 0.6rem;
+      left: 1rem;
+      .icon {
+        display: block;
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+    }
+  }
+}
+
 @media (min-width: $media-mobile) {
   header {
     nav {
+      .sidebar-button {
+        display: none;
+      }
       ul {
         a {
           line-height: 1.4rem;
@@ -83,6 +121,12 @@ header {
 
 main.doc {
   padding-left: $sidebar-width;
+}
+
+@media (max-width: $media-mobile) {
+  main.doc {
+    padding-left: 0;
+  }
 }
 
 main.blog, main.home {
@@ -293,12 +337,17 @@ h1.blog-excerpt-title, h1.post-title {
 }
 
 .sidebar {
+  ul#mobile-site-nav {
+    display: none;
+  }
+
   ul {
     padding: 0;
     margin: 0;
     line-height: 1.7;
     list-style-type: none;
   }
+
   a {
     display: inline-block;
   }
@@ -315,19 +364,23 @@ h1.blog-excerpt-title, h1.post-title {
   border-right: 1px solid $border-color;
   overflow-y: auto;
 
-  /*
-  .nav-links
-    display none
-    border-bottom 1px solid $borderColor
-    padding 0.5rem 0 0.75rem 0
-    a
-      font-weight 600
-    .nav-item, .repo-link
-      display block
-      line-height 1.25rem
-      font-size 1.1em
-      padding 0.5rem 0 0.5rem 1.5rem
-  */
+  ul#mobile-site-nav {
+    border-bottom: 1px solid $border-color;
+    padding: 0.5rem 0 0.75rem 0;
+    li {
+      a {
+        font-weight: 600;
+        color: inherit;
+        &:hover, &.router-link-active {
+          color: $accent-color;
+        }
+      }
+
+      line-height: 1.25rem;
+      font-size: 1.1em;
+      padding: 0.5rem 0 0.5rem 1.5rem;
+    }
+  }
 
   .sidebar-sub-headers {
     padding-left: 1rem;
@@ -416,6 +469,19 @@ h1.blog-excerpt-title, h1.post-title {
       .sidebar-group {
         margin-top: 1em;
       }
+    }
+  }
+}
+
+@media (max-width: $media-mobile) {
+  .sidebar {
+    display: none;
+    &.visible {
+      display: block;
+    }
+
+    ul#mobile-site-nav {
+      display: block;
     }
   }
 }
