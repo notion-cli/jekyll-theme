@@ -336,6 +336,10 @@ h1.blog-excerpt-title, h1.post-title {
     h6 { font-size: calc(.75em * 0.8); }
 }
 
+.sidebar.home, .sidebar.blog {
+  display: none;
+}
+
 .sidebar {
   ul#mobile-site-nav {
     display: none;
