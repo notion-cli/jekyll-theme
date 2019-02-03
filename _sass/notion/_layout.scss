@@ -217,6 +217,24 @@ main.home {
         width: 6em;
       }
     }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .feature {
+        max-width: 100%;
+        padding: 0 2.5rem;
+        h2 {
+          font-size: 1.4rem;
+          font-weight: 500;
+          color: lighten($text-color, 10%);
+        }
+
+        p {
+          color: lighten($text-color, 25%);
+        }
+      }
   }
 }
 
