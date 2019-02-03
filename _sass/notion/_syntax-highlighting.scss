@@ -20,6 +20,12 @@ pre.highlight {
     line-height: 1.4em;
 }
 
+@media (max-width: $media-mobile) {
+    pre.highlight {
+        font-size: 0.75rem;
+    }
+}
+
 // Slightly modified `slate` theme from https://github.com/uraimo/pygments-vimstyles/blob/master/slate.css
 // 
 // Modifications:
