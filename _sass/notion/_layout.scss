@@ -328,6 +328,22 @@ main.home .page-contents {
   max-width: 960px;
 }
 
+.page-nav {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 0;
+  .inner {
+    min-height: 2rem;
+    margin-top: 0;
+    border-top: 1px solid $border-color;
+    padding-top: 1rem;
+    overflow: auto;
+  }
+  span.next {
+    float: right;
+  }
+}
+
 footer {
     margin-top: 2rem;
     padding: 2.5rem;
