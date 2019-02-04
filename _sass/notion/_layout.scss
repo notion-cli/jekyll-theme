@@ -478,11 +478,6 @@ h1.blog-excerpt-title, h1.post-title {
     */
   }
 
-  .sidebar-group-items {
-    transition: height .1s ease-out;
-    overflow: hidden;
-  }
-
   a.sidebar-link {
     font-weight: 400;
     display: inline-block;
@@ -526,9 +521,10 @@ h1.blog-excerpt-title, h1.post-title {
 
 @media (max-width: $media-mobile) {
   .sidebar {
-    display: none;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
     &.visible {
-      display: block;
+      transform: translateX(0);
     }
 
     ul#mobile-site-nav {

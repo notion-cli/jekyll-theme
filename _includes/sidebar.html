@@ -9,7 +9,7 @@
                 {% assign collapseClass = " collapsed" %}
             {% endif %}
             <div class="sidebar-group{{ collapseClass }}">
-                <p class="sidebar-heading" onclick="$(this.parentNode).toggleClass('collapsed')"><span>{{ section.title }}</span></p>
+                <p class="sidebar-heading" onclick="toggleSidebarGroup(this.parentNode)"><span>{{ section.title }}</span></p>
                 {% if section.docs %}
                 <ul class="sidebar-group-items">
                     {% for doc in section.docs %}

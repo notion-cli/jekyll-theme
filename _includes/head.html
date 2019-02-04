@@ -14,8 +14,14 @@
     {% include google-analytics.html %}
     {% endif %}
   
-    <script src="{{ "/assets/jquery-3.3.1.slim.min.js" | relative_url }}"></script>
+    <script src="{{ "/assets/jquery-3.3.1.min.js" | relative_url }}"></script>
     <script>
+      function toggleSidebarGroup(elt) {
+        $(elt).find('.sidebar-group-items')
+              .slideToggle(50, function() {
+                $(elt).toggleClass('collapsed');
+              });
+      }
       $(function() {
         $('main').on('click', function() {
           $('nav.sidebar').removeClass('visible');
