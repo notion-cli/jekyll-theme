@@ -450,6 +450,13 @@ h1.blog-excerpt-title, h1.post-title {
     ul {
       display: none;
     }
+    .sidebar-heading {
+      .arrow {
+        border-top: 4px solid transparent;
+        border-bottom: 4px solid transparent;
+        border-left: 6px solid #ccc;
+      }
+    }
   }
 
   .sidebar-group:not(.collapsed) {
@@ -459,6 +466,11 @@ h1.blog-excerpt-title, h1.post-title {
 
     .sidebar-heading {
       color: inherit;
+      .arrow {
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 6px solid #ccc;
+      }
     }
   }
 
@@ -474,16 +486,14 @@ h1.blog-excerpt-title, h1.post-title {
     &:hover {
       color: inherit;
     }
-    /*
     .arrow {
+      display: inline-block;
+      width: 0;
+      height: 0;
       position: relative;
       top: -0.12em;
       left: 0.5em;
     }
-    &.open .arrow {
-      top: -0.18em;
-    }
-    */
   }
 
   a.sidebar-link {
