@@ -344,6 +344,14 @@ main.home .page-contents {
   }
 }
 
+@media (max-width: $media-mobile) {
+  .page-nav {
+    .inner {
+      font-size: 0.9rem;
+    }
+  }
+}
+
 footer {
     margin-top: 2rem;
     padding: 2.5rem;
