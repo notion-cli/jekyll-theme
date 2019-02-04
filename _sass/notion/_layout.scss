@@ -384,7 +384,7 @@ h1.blog-excerpt-title, h1.post-title {
 }
 
 .sidebar.home, .sidebar.blog {
-  display: none;
+  transform: translateX(-100%);
 }
 
 .sidebar {
