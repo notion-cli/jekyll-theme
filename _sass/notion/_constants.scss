@@ -3,7 +3,7 @@ $color-primary: hsl(210, 40%, 48%);
 $color-primary-light: hsl(210, 40%, 60%);
 $color-primary-very-dark: hsl(210, 40%, 12%);
 $color-primary-dark: hsl(210, 40%, 36%);
-$color-secondary: hsl(345, 25%, 50%);
+$color-secondary: hsl(345, 45%, 53%);
 $color-secondary-dark: hsl(345, 25%, 25%);
 $color-primary-very-light: hsl(210, 40%, 93%);
 $code-bg-color: #262626; // match the syntax-highlighting
@@ -13,6 +13,8 @@ $arrow-bg-color: #ccc;
 $navbar-height: 3.6rem;
 $sidebar-width: 20rem;
 $content-width: 740px;
+
+$link-shift: 0.2em;
 
 // responsive breakpoints
 $media-narrow: 959px;

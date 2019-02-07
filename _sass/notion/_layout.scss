@@ -352,6 +352,22 @@ main.home .page-contents {
   span.next {
     float: right;
   }
+
+  a {
+    transition: 0.2s all;
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+
+  .next a:hover {
+    margin-right: $link-shift;
+  }
+
+  .prev a:hover {
+    margin-left: $link-shift;
+  }
 }
 
 @media (max-width: $media-mobile) {
@@ -485,7 +501,7 @@ h1.blog-excerpt-title, h1.post-title {
   }
 
   .sidebar-heading {
-    color: #999;
+    color: #707070;
     transition: color .15s ease;
     cursor: pointer;
     font-size: 1.1em;
@@ -514,9 +530,15 @@ h1.blog-excerpt-title, h1.post-title {
     padding: 0.35rem 1rem 0.35rem 1.25rem;
     line-height: 1.4;
     width: 100%;
+    transition: 0.2s all;
     &:hover {
-      color: $color-primary;
+      color: $color-secondary;
     }
+
+    &:not(.active):hover {
+      margin-left: $link-shift;
+    }
+
     &.active {
       font-weight: 600;
       color: $color-primary;
